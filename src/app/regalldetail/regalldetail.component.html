@@ -1,0 +1,30 @@
+<div>
+    <h2>Register List</h2>
+    <!-- <button [routerLink]="['/register']">Create_tracke</button> -->
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Phonenumber</th>
+          <th>Password</th>
+          <th>Actions</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.phonenumber }}</td>
+          <td>{{ user.password }}</td>
+          <td>
+            <button (click)="editUser(i)">Edit</button>
+            <button (click)="deleteUser(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 

@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TrackerComponent } from './tracker/tracker.component';
+import { OverallComponent } from './overall/overall.component';
+import { RegalldetailComponent } from './regalldetail/regalldetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    TrackerComponent
+    TrackerComponent,
+    OverallComponent,
+    RegalldetailComponent
   ],
   imports: [
     BrowserModule,
