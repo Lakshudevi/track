@@ -23,17 +23,24 @@ export class RegalldetailComponent {
       next: (response) => {
         console.log('Data submitted successfully:', response);
         this.users =response;
-
       },
       error: (error) => console.error('Error submitting data:', error),
     });
   }
 
   editUser(index: number) {
-    alert(`Editing user: ${this.users[index].date}`);
+    alert(`Editing user: ${this.users[index]._id}`);
   }
 
   deleteUser(index: number) {
+    alert(`Delete user: ${this.users[index]._id}`);
+    this.http.delete('http://localhost:3000/api/regs/' + this.users[index]._id).subscribe({
+      next: (response) => {
+        console.log('Data submitted successfully:', response);
+        this.users =response;
+      },
+      error: (error) => console.error('Error submitting data:', error),
+    });
     this.users.splice(index, 1);
   }
 
