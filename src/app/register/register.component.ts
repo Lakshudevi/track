@@ -25,7 +25,7 @@ export class RegisterComponent {
     console.log('Password:',this.password);
     if (form.valid) {
       // Make POST request to backend API
-      this.http.post('http://localhost:3000/api/regs', this.user).subscribe({
+      this.http.post('https://29tracks.netlify.app/api/regs', this.user).subscribe({
         next: (response) => {
           console.log('Data submitted successfully:', response);
           this.submitted = true;

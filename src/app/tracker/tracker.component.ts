@@ -18,7 +18,7 @@ export class TrackerComponent {
     onSubmit(form: any) {
       if (form.valid) {
         // Make POST request to backend API
-        this.http.post('http://localhost:3000/api/expenses', this.user).subscribe({
+        this.http.post('api/expenses', this.user).subscribe({
           next: (response) => {
             console.log('Data submitted successfully:', response);
             this.submitted = true;

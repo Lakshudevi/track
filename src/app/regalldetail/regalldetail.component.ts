@@ -19,7 +19,7 @@ export class RegalldetailComponent {
     this.loadExpenses();
   }
   loadExpenses(): void {
-    this.http.get('http://localhost:3000/api/regs').subscribe({
+    this.http.get('https://29tracks.netlify.app/api/regs').subscribe({
       next: (response) => {
         console.log('Data submitted successfully:', response);
         this.users =response;
@@ -34,7 +34,7 @@ export class RegalldetailComponent {
 
   deleteUser(index: number) {
     alert(`Delete user: ${this.users[index]._id}`);
-    this.http.delete('http://localhost:3000/api/regs/' + this.users[index]._id).subscribe({
+    this.http.delete('https://29tracks.netlify.app/api/regs/' + this.users[index]._id).subscribe({
       next: (response) => {
         console.log('Data submitted successfully:', response);
         this.users =response;

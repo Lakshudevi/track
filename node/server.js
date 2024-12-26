@@ -7,7 +7,7 @@ const regRoutes = require('./routes/regRoutes');
 const cors = require('cors'); // Import CORS
 
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 // Middleware
 app.use(bodyParser.json());
