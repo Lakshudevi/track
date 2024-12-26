@@ -18,7 +18,7 @@ export class OverallComponent {
     this.loadExpenses();
   }
   loadExpenses(): void {
-    this.http.get('https://29tracks.netlify.app/api/expenses').subscribe({
+    this.http.get('https://track-c7wm.onrender.com/api/expenses').subscribe({
       next: (response) => {
         console.log('Data submitted successfully:', response);
         this.users =response;
@@ -34,7 +34,7 @@ export class OverallComponent {
 
   deleteUser(index: number) {
     alert(`Delete user: ${this.users[index]._id}`);
-    this.http.delete('https://29tracks.netlify.app/api/expenses/'+ this.users[index]._id ).subscribe({
+    this.http.delete('https://track-c7wm.onrender.com/api/expenses/'+ this.users[index]._id ).subscribe({
       next: (response) => {
         console.log('Data submitted successfully:', response);
         this.users =response;
